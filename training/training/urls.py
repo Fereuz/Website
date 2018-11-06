@@ -18,8 +18,9 @@ from django.contrib import admin
 import mainapp.views as mainapp
 
 urlpatterns = [
-    url(r'^$', mainapp.main),
-	url(r'^products/', mainapp.products),
-	url(r'^contact/', mainapp.contact),
+    url(r'^$', mainapp.main, name='main'),
+	url(r'^products/', mainapp.products, name='products'),
+	url(r'^contact/', mainapp.contact, name='contact'),
+	
 	url(r'^admin/', admin.site.urls),
 ]
